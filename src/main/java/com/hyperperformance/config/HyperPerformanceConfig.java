@@ -14,9 +14,10 @@ public class HyperPerformanceConfig {
 
     public boolean enableEntityCulling = true;
     public boolean enableItemMerging = true;
-    public boolean enableModelDeduplication = true;
+    public boolean enableVoxelShapeDedup = true;
+    public boolean enableFastCollision = true;
+    public boolean enableParticleCulling = true;
     public boolean enableLazyDfu = true;
-    public boolean enableImmediateBatching = true;
 
     public static HyperPerformanceConfig INSTANCE = new HyperPerformanceConfig();
 

@@ -11,13 +11,13 @@ public class HyperPerformance implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("[HyperPerformance] Initializing performance suite...");
+        LOGGER.info("[Tungsten] Initializing optimization suite...");
         HyperPerformanceConfig.load();
-        LOGGER.info("[HyperPerformance] Loaded configuration options:");
+        LOGGER.info("[Tungsten] Loaded configuration options:");
         LOGGER.info("  - Entity Culling: {}", HyperPerformanceConfig.INSTANCE.enableEntityCulling);
-        LOGGER.info("  - Item Merging: {}", HyperPerformanceConfig.INSTANCE.enableItemMerging);
-        LOGGER.info("  - Model Deduplication: {}", HyperPerformanceConfig.INSTANCE.enableModelDeduplication);
-        LOGGER.info("  - Lazy DFU: {}", HyperPerformanceConfig.INSTANCE.enableLazyDfu);
-        LOGGER.info("  - Immediate Render Batching: {}", HyperPerformanceConfig.INSTANCE.enableImmediateBatching);
+        LOGGER.info("  - Item & XP Merging: {}", HyperPerformanceConfig.INSTANCE.enableItemMerging);
+        LOGGER.info("  - VoxelShape Dedup: {}", HyperPerformanceConfig.INSTANCE.enableVoxelShapeDedup);
+        LOGGER.info("  - Fast Collision Math: {}", HyperPerformanceConfig.INSTANCE.enableFastCollision);
+        LOGGER.info("  - Particle Culling: {}", HyperPerformanceConfig.INSTANCE.enableParticleCulling);
     }
 }

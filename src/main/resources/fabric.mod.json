@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "hyperperformance",
   "version": "${version}",
-  "name": "HyperPerformance",
-  "description": "High-leverage optimization suite for Minecraft (Entity Culling, Render Batching, Memory Deduplication, Lazy DFU, and Item Merging).",
+  "name": "Tungsten",
+  "description": "High-leverage optimization suite for Minecraft (Entity Culling, Fast Math, Memory Deduplication, and Item Merging).",
   "authors": [
     "Antigravity"
   ],
@@ -15,6 +15,9 @@
     ],
     "client": [
       "com.hyperperformance.client.HyperPerformanceClient"
+    ],
+    "modmenu": [
+      "com.hyperperformance.client.TungstenModMenu"
     ]
   },
   "mixins": [
@@ -23,5 +26,8 @@
   "depends": {
     "fabricloader": ">=0.15.0",
     "minecraft": "${minecraft_version}"
+  },
+  "suggests": {
+    "modmenu": "*"
   }
 }

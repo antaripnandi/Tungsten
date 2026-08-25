@@ -7,7 +7,9 @@
     "merge.ItemEntityMergeMixin",
     "merge.ItemEntityInvoker",
     "merge.ExperienceOrbMergeMixin",
-    "merge.ExperienceOrbInvoker"
+    "merge.ExperienceOrbInvoker",
+    "memory.VoxelShapeDedupMixin",
+    "math.EntityCollisionFastPathMixin"
   ],
   "client": [
     "culling.EntityCullingMixin"

@@ -13,6 +13,8 @@ version = "0.1.0+mc$mcVersion"
 
 repositories {
     maven("https://maven.fabricmc.net/")
+    maven("https://maven.terraformersmc.com/releases/")
+    maven("https://maven.nucleoid.xyz/")
     mavenCentral()
 }
 
@@ -25,6 +27,17 @@ val fabricApiVersions = mapOf(
     "1.21.8" to "0.136.1+1.21.8",
     "26.1.2" to "0.155.2+26.1.2",
     "26.2" to "0.156.0+26.2",
+)
+
+val modMenuVersions = mapOf(
+    "1.20.1" to "7.2.2",
+    "1.20.4" to "9.2.0",
+    "1.20.6" to "10.0.0",
+    "1.21.1" to "11.0.4",
+    "1.21.4" to "13.0.4",
+    "1.21.8" to "15.0.2",
+    "26.1.2" to "18.0.0",
+    "26.2" to "18.0.0",
 )
 
 val minecraftDependencyRanges = mapOf(
@@ -62,6 +75,7 @@ dependencies {
     loomx.applyMojangMappings()
     modImplementation("net.fabricmc:fabric-loader:0.19.3")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabricApiVersions[mcVersion] ?: "0.156.0+26.2"}")
+    modCompileOnly("com.terraformersmc:modmenu:${modMenuVersions[mcVersion] ?: "18.0.0"}")
 }
 
 tasks.processResources {
