@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hyperperformance.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "merge.ItemEntityMergeMixin",
+    "merge.ItemEntityInvoker",
+    "merge.ExperienceOrbMergeMixin",
+    "merge.ExperienceOrbInvoker"
+  ],
+  "client": [
+    "culling.EntityCullingMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
