@@ -19,16 +19,16 @@ public abstract class FastTrigMixin {
         }
     }
 
-//? if <26.1 {
+//? if <1.21.1 {
 /*  @Inject(method = "sin(F)F", at = @At("HEAD"), cancellable = true)
-    private static void fastSinFloat(float value, CallbackInfoReturnable<Float> cir) {
+    private static void fastSin(float value, CallbackInfoReturnable<Float> cir) {
         if (HyperPerformanceConfig.INSTANCE.enableFastMath) {
             cir.setReturnValue(SIN_TABLE[(int) (value * 10430.378350470453f) & 65535]);
         }
     }
 
     @Inject(method = "cos(F)F", at = @At("HEAD"), cancellable = true)
-    private static void fastCosFloat(float value, CallbackInfoReturnable<Float> cir) {
+    private static void fastCos(float value, CallbackInfoReturnable<Float> cir) {
         if (HyperPerformanceConfig.INSTANCE.enableFastMath) {
             cir.setReturnValue(SIN_TABLE[(int) (value * 10430.378350470453f + 16384.0f) & 65535]);
         }
