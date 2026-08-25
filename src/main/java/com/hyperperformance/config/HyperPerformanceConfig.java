@@ -16,8 +16,9 @@ public class HyperPerformanceConfig {
     public boolean enableItemMerging = true;
     public boolean enableVoxelShapeDedup = true;
     public boolean enableFastCollision = true;
-    public boolean enableParticleCulling = true;
-    public boolean enableLazyDfu = true;
+    public boolean enableFastMath = true;
+    public boolean enableDynamicFps = true;
+    public boolean enableAiThrottling = true;
 
     public static HyperPerformanceConfig INSTANCE = new HyperPerformanceConfig();
 

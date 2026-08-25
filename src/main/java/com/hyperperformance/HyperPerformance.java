@@ -16,8 +16,9 @@ public class HyperPerformance implements ModInitializer {
         LOGGER.info("[Tungsten] Loaded configuration options:");
         LOGGER.info("  - Entity Culling: {}", HyperPerformanceConfig.INSTANCE.enableEntityCulling);
         LOGGER.info("  - Item & XP Merging: {}", HyperPerformanceConfig.INSTANCE.enableItemMerging);
+        LOGGER.info("  - Fast Math Engine: {}", HyperPerformanceConfig.INSTANCE.enableFastMath);
         LOGGER.info("  - VoxelShape Dedup: {}", HyperPerformanceConfig.INSTANCE.enableVoxelShapeDedup);
         LOGGER.info("  - Fast Collision Math: {}", HyperPerformanceConfig.INSTANCE.enableFastCollision);
-        LOGGER.info("  - Particle Culling: {}", HyperPerformanceConfig.INSTANCE.enableParticleCulling);
+        LOGGER.info("  - Mob AI Optimization: {}", HyperPerformanceConfig.INSTANCE.enableAiThrottling);
     }
 }

@@ -9,7 +9,9 @@
     "merge.ExperienceOrbMergeMixin",
     "merge.ExperienceOrbInvoker",
     "memory.VoxelShapeDedupMixin",
-    "math.EntityCollisionFastPathMixin"
+    "math.EntityCollisionFastPathMixin",
+    "math.FastTrigMixin",
+    "ai.GoalSelectorOptimizerMixin"
   ],
   "client": [
     "culling.EntityCullingMixin"

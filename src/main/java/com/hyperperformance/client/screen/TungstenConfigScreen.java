@@ -21,21 +21,23 @@ public final class TungstenConfigScreen extends Screen {
 
     @Override
     protected void init() {
-        int y = 35;
-        int btnWidth = 220;
+        int y = 25;
+        int btnWidth = 240;
         int x = (this.width - btnWidth) / 2;
 
         addToggleButton(x, y, "Entity Visibility Culling", () -> HyperPerformanceConfig.INSTANCE.enableEntityCulling, v -> HyperPerformanceConfig.INSTANCE.enableEntityCulling = v);
         y += 24;
         addToggleButton(x, y, "Item & XP Orb Merging", () -> HyperPerformanceConfig.INSTANCE.enableItemMerging, v -> HyperPerformanceConfig.INSTANCE.enableItemMerging = v);
         y += 24;
+        addToggleButton(x, y, "Fast Math (Trig Lookup)", () -> HyperPerformanceConfig.INSTANCE.enableFastMath, v -> HyperPerformanceConfig.INSTANCE.enableFastMath = v);
+        y += 24;
         addToggleButton(x, y, "VoxelShape Memory Dedup", () -> HyperPerformanceConfig.INSTANCE.enableVoxelShapeDedup, v -> HyperPerformanceConfig.INSTANCE.enableVoxelShapeDedup = v);
         y += 24;
         addToggleButton(x, y, "Fast Collision Math", () -> HyperPerformanceConfig.INSTANCE.enableFastCollision, v -> HyperPerformanceConfig.INSTANCE.enableFastCollision = v);
         y += 24;
-        addToggleButton(x, y, "Particle Culling", () -> HyperPerformanceConfig.INSTANCE.enableParticleCulling, v -> HyperPerformanceConfig.INSTANCE.enableParticleCulling = v);
+        addToggleButton(x, y, "Mob AI Optimization", () -> HyperPerformanceConfig.INSTANCE.enableAiThrottling, v -> HyperPerformanceConfig.INSTANCE.enableAiThrottling = v);
 
-        y += 30;
+        y += 28;
         this.addRenderableWidget(
             Button.builder(CommonComponents.GUI_DONE, b -> this.onClose())
                 .bounds(x, y, btnWidth, 20)
@@ -51,7 +53,7 @@ public final class TungstenConfigScreen extends Screen {
                 b.setMessage(Component.literal(label + ": " + (next ? "ON" : "OFF")));
                 HyperPerformanceConfig.save();
             })
-            .bounds(x, y, 220, 20)
+            .bounds(x, y, 240, 20)
             .build()
         );
     }
