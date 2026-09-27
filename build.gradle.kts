@@ -27,6 +27,7 @@ val fabricApiVersions = mapOf(
     "1.21.8" to "0.136.1+1.21.8",
     "26.1.2" to "0.155.2+26.1.2",
     "26.2" to "0.156.0+26.2",
+    "26.3" to "0.161.0+26.3",
 )
 
 val modMenuVersions = mapOf(
@@ -38,6 +39,7 @@ val modMenuVersions = mapOf(
     "1.21.8" to "15.0.2",
     "26.1.2" to "18.0.0",
     "26.2" to "18.0.0",
+    "26.3" to "18.0.0",
 )
 
 val minecraftDependencyRanges = mapOf(
@@ -49,6 +51,7 @@ val minecraftDependencyRanges = mapOf(
     "1.21.8" to ">=1.21.5 <=1.21.11",
     "26.1.2" to ">=26.1 <=26.1.2",
     "26.2" to "26.2",
+    "26.3" to "26.3",
 )
 
 val javaVersion = when {
@@ -73,8 +76,8 @@ loom {
 dependencies {
     minecraft("com.mojang:minecraft:$mcVersion")
     loomx.applyMojangMappings()
-    modImplementation("net.fabricmc:fabric-loader:0.19.3")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${fabricApiVersions[mcVersion] ?: "0.156.0+26.2"}")
+    modImplementation("net.fabricmc:fabric-loader:0.19.5")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${fabricApiVersions[mcVersion] ?: "0.161.0+26.3"}")
     modCompileOnly("com.terraformersmc:modmenu:${modMenuVersions[mcVersion] ?: "18.0.0"}")
 }
 

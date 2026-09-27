@@ -30,7 +30,8 @@ stonecutter {
         mc("1.21.8")
         mc("26.1.2")
         mc("26.2")
+        mc("26.3")
 
-        vcsVersion = "26.2"
+        vcsVersion = "26.3"
     }
 }
