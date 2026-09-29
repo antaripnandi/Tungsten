@@ -11,7 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EntityRenderDispatcher.class)
 public abstract class EntityCullingMixin {
-    @Inject(method = "shouldRender", at = @At("HEAD"), cancellable = true)
+//? if <26.3 {
+    /*@Inject(method = "shouldRender", at = @At("HEAD"), cancellable = true)
     private <E extends Entity> void shouldCullEntity(
             E entity,
             Frustum frustum,
@@ -27,4 +28,23 @@ public abstract class EntityCullingMixin {
             cir.setReturnValue(false);
         }
     }
+*///?} else {
+  @Inject(method = "shouldRender", at = @At("HEAD"), cancellable = true)
+    private <E extends Entity> void shouldCullEntity(
+            E entity,
+            Frustum frustum,
+            double x,
+            double y,
+            double z,
+            float partialTick,
+            CallbackInfoReturnable<Boolean> cir
+    ) {
+        if (!HyperPerformanceConfig.INSTANCE.enableEntityCulling) {
+            return;
+        }
+        if (entity.isInvisible() && !entity.isCurrentlyGlowing()) {
+            cir.setReturnValue(false);
+        }
+    }
+//?}
 }

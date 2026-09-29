@@ -1,6 +1,6 @@
 # Tungsten ⚡
 
-**Tungsten** is a comprehensive, high-leverage Minecraft Java Edition optimization suite for Fabric spanning versions `1.20.x`, `1.21.x`, `26.1.x`, and `26.2.x`.
+**Tungsten** is a comprehensive, high-leverage Minecraft Java Edition optimization suite for Fabric spanning versions `1.20.x`, `1.21.x`, `26.1.x`, `26.2.x`, and `26.3`.
 
 ---
 
@@ -26,6 +26,7 @@
 - `1.21.8` (`1.21.5` – `1.21.11`)
 - `26.1.2` (`26.1` – `26.1.2`)
 - `26.2`
+- `26.3` (Latest)
 
 ---
 
